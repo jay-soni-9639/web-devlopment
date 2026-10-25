@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgb(68, 63, 63);
+}
+h1{
+    padding: 20px 40px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    
+
+}
+h5{
+    font-size: 30px;
+    color: aliceblue;
+}
+button{
+    padding: 20px;
+    font-size: 20px;
+    background-color: aquamarine;
+    color: rgb(50, 152, 241);
+    font-weight: 600;
+}
+button:active{
+    scale: 0.9;
+}

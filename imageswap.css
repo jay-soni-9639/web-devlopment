@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+
+    
+}
+button{
+    background-color: aqua;
+    font-size: 50px;
+    border-radius: 5px;
+
+}
+button:active{
+    scale: 0.9;
+}

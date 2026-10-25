@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html{
+    height: 100%;
+    width: 100%;
+}
+/* .parent{
+    height: 100vh;
+    width: 100vw;
+    
+    background-color: blue;
+
+
+
+
+}
+.child{
+    height: 100px;
+    width: 50%
+    ;
+    background-color: aqua
+    ;
+}
+h1{
+    font-size: 2rem;
+} */
+
+/* 1rem means 16px html has by default 16px size of elements */
+/* .parent{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+@media(max-width:1200px){
+     min bhi lagai sakia 
+    .parent{
+        height: 400px;
+        width: 400px;
+        background-color: black;
+    }
+
+} */
+
+ /* .parent{
+    width: 100%;
+    height: 600px;
+    display: flex;
+ }
+ .child{
+    flex-grow: 1;
+    background-color: aqua;
+    border: solid black 2px
+    
+    
+    ;
+    
+ } */
+
+ /* .parent{
+    height: 1000px;
+    width: 1000px;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-columns: 100px 300px 100px;
+    grid-template-rows: 100px 100px 100px;
+
+
+}
+.child{
+    
+    background-color: red;
+    border: solid black 2px;
+} */
+
+.parent{
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+    display: grid;
+    grid-template-areas:
+    "a b c"
+    "a b c"
+    "a b c" 
+    ;
+   
+
+
+}
+.child{
+    
+    background-color: red;
+    border: solid black 2px;
+    
+
+}
+.child-a{
+    grid-area: a;
+    background-color: blue;
+}
+.child-b{
+    grid-area: b;
+    background-color: blueviolet;
+}
+.child-c{
+    grid-area: c;
+    background-color: bisque;
+}

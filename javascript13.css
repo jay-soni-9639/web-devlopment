@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: column;
+
+}
+#box{
+    height: 100px;
+    width: 100px;
+    background-color: rgb(230,40,130);
+    border-radius: 50%;
+    border: 5px solid rgb(248, 196, 99);
+   
+}
+button{
+    padding: 10px;
+    font-size: 20px;
+    
+}
+button:active{
+    scale: 0.9;
+}

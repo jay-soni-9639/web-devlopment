@@ -1,0 +1,112 @@
+/* body{
+    background-color: black;
+    color: aliceblue;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    text-align: center;
+} */
+/* #a{
+    height: 500px;
+    width: 400px;
+    background: linear-gradient(to right, red,green,blue);
+    background: radial-gradient(red,yellow);
+    border-radius: 50%;
+} */
+
+/* #a{
+    height: 400px;
+    width: 300px;
+    background-image: url(https://encrypted-tbn0.gstatic.com/?q=tbn:ANd9GcTU-clQ0uTkZ-AwjAJhdiD8NT8od2Z7oLQ8zBc2o8_qDg&s=10);
+    background-size: cover;
+    background-position: center;
+    margin-left: 600px;
+   
+
+} */
+/* #j{
+    height: 300px;
+    width: 300px;
+    background-color: lightcoral;
+    position: absolute;
+    top:80%;
+    left:50%;
+    z-index: 9;
+    
+}
+#k{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(209, 201, 51);
+    position: absolute;
+    top:90%;
+    left:60%;
+    z-index: 10;
+    
+} */
+/* #s{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(182, 128, 240);
+    position: absolute;
+    top:100%;
+    left:70%;
+    z-index: 11;
+} */
+
+
+/* #b{
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+
+/* #parent{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(185, 72, 72);
+    position: relative;
+
+}
+#child{
+    height: 200px;
+    width: 200px;
+    background-color: bisque;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+} */
+
+body{
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+
+}
+#child{
+    height: 200px;
+    
+    width: 200px;
+    color: aqua;
+}
+#child1{
+    height: 200px;
+    width: 200px;
+    color: rgb(9, 41, 41);
+}
+
+#child2{
+    height: 200px;
+    width: 200px;
+    color: rgb(8, 15, 15);
+}
+

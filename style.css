@@ -1,0 +1,77 @@
+/* css means cascading style sheet */
+
+/* *{
+    color: purple;
+}
+p{
+    color: brown;
+}
+.jay{
+    color: black;
+
+}
+#soni{
+    color: rgb(244, 142, 17);
+}
+input[type="name"]{
+    color: red;
+} */
+
+/* *{
+    color: brown;
+}
+#a{
+    color: aqua;
+}
+.b{
+    color: blue;
+}
+p{
+    color: green;
+} */
+
+/* p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+    font-weight:1000;
+    line-height: 2;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+    text-shadow: 10px 10px 10px red;
+    shadow ma aapde che ne 10 pelu x axes mate biju y mate ne 3ju aapde blur mate 
+    background-color: rgb(10, 154,160,.5);
+
+} */
+
+#k{
+    height: 300px;
+    width: 200px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: aquamarine;
+}
+
+/* #k{
+    border-width: 5px;
+    padding: 20px;
+    border-color: rgb(13, 232, 239);
+    border-style: solid;
+    border-radius: 10px;
+} */
+/* .big{
+    height: 400px;
+    width: 250px;
+    background-size: cover; 
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSRJjoXXP0kX7hgIUQVbzE1SHt_soGCL5dtnTloIIbig&s=10);
+} */
+
+.big{
+    height: 300px;
+    width: 300px;
+    background: linear-gradient(to bottom,red,blue);
+    box-shadow: 10px 10px 10px rebeccapurple;
+    
+}
