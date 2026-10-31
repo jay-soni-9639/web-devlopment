@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>To-Do List</h2>
+
+<input id="task" placeholder="Enter task">
+<button onclick="addTask()">Add</button>
+
+<ul id="list"></ul>
+
+<script>
+function addTask() {
+    let task = document.getElementById("task").value;
+
+    if (task != "") {
+        localStorage.setItem("task", task);
+        document.getElementById("list").innerHTML =
+            "<li>" + localStorage.getItem("task") + "</li>";
+    }
+}
+</script>
+
+</body>
+</html>
