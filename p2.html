@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Student Registration Form</title>
+</head>
+<body>
+
+<h1 align="">Student Registration Form</h1>
+<form action="#" method="post">
+<fieldset>
+<legend><b>Personal Information</b></legend>
+
+<label>Enrollment No:</label>
+<input	type="text"	name="enroll"	placeholder="240210116003"	maxlength="12" required>
+<br><br>
+
+<label>Full Name:</label>
+<input type="text" name="name" placeholder="balar krina" required>
+<br><br>
+
+<label>Father's Name:</label>
+<input type="text" name="father" required>
+<br><br>
+ 
+
+<label>Mother's Name:</label>
+<input type="text" name="mother">
+<br><br>
+<label>Date of Birth:</label>
+<input type="date" name="dob" required>
+<br><br>
+<label>Gender:</label>
+<input type="radio" name="gender" value="Male"> Male
+<input type="radio" name="gender" value="Female"> Female
+<input type="radio" name="gender" value="Other"> Other
+<br><br>
+<label>Blood Group:</label>
+<select name="blood">
+<option selected>Select</option>
+<option>A+</option>
+<option>A-</option>
+<option>B+</option>
+<option>B-</option>
+<option>O+</option>
+<option>O-</option>
+<option>AB+</option>
+<option>AB-</option>
+</select>
+
+</fieldset>
+
+<br>
+<fieldset>
+<legend><b>Academic Details</b></legend>
+
+<label>Branch:</label>
+<select name="branch" required>
+<option selected>Select Branch</option>
+<option>Information Technology</option>
+<option>Computer Engineering</option>
+<option>Mechanical Engineering</option>
+<option>Civil Engineering</option>
+<option>Electrical Engineering</option>
+</select>
+
+<br><br>
+<label>Semester:</label>
+<input type="number" name="semester" min="1" max="8" required>
+
+<br><br>
+<label>Section:</label>
+<select>
+ 
+<option>A</option>
+<option>B</option>
+
+</select>
+
+<br><br>
+<label>CGPA:</label>
+<input type="number" step="0.01" min="0" max="10">
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Contact Details</b></legend>
+
+<label>Email:</label>
+<input type="email" name="email" placeholder="abc@gmail.com" required>
+<br><br>
+<label>Mobile:</label>
+<input	type="tel"	name="mobile"	pattern="[0-9]{10}"	placeholder="9876543210" required>
+<br><br>
+<label>Address:</label><br>
+<textarea rows="4" cols="40"></textarea>
+</fieldset>
+<br>
+
+<fieldset>
+<legend><b>Other Information</b></legend>
+
+<label>Upload Photo:</label>
+<input type="file">
+<br><br>
+<label>Resume:</label>
+<input type="file">
+<br><br>
+<label>Skills:</label><br>
+<input type="checkbox"> HTML
+<input type="checkbox"> CSS
+<input type="checkbox"> JavaScript
+<input type="checkbox"> Python
+<input type="checkbox"> Java
+ 
+
+<br><br>
+
+<label>Favorite Color:</label>
+<input type="color">
+
+<br><br>
+
+<label>Website:</label>
+<input type="url" placeholder="https://example.com">
+
+<br><br>
+
+<label>Registration Time:</label>
+<input type="time">
+
+<br><br>
+
+<label>Admission Month:</label>
+<input type="month">
+
+<br><br>
+<label>Search Course:</label>
+<input type="search">
+<br><br>
+<label>Password:</label>
+<input type="password" minlength="6" required>
+
+</fieldset>
+<br>
+
+<input type="checkbox" required>
+I agree to the Terms and Conditions.
+
+<br><br>
+<input type="submit" value="Register">
+<input type="reset" value="Clear">
+<input type="button" value="Print">
+<input type="hidden" name="college" value="GEC Bhavnagar">
+
+</form>
+</body>
+</html>
