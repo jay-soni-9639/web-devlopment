@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Responsive Media GalleryIT-GECBhavnagar</title>
+<style>
+
+/* Universal Selector */
+*{
+margin:0; padding:0;
+box-sizing:border-box;
+}
+ 
+/* Element Selector */ body{
+font-family:Arial, sans-serif; background:#f4f4f4;
+}
+/* Header */ header{
+background:#004080; color:white;
+text-align:center; padding:20px;
+}
+
+/* Class Selector */
+.gallery{ display:flex; flex-wrap:wrap;
+justify-content:center; gap:20px; padding:20px;
+}
+
+/* Figure Design */ figure{
+width:300px; background:white; border:2px solid gray; padding:10px;
+text-align:center; border-radius:8px;
+}
+
+/* Group Selector */ img,
+audio, video, iframe{
+width:100%;
+}
+
+/* Image */ img{
+height:200px;
+}
+/* Video */ video{
+height:200px;
+}
+/* Iframe */ iframe{
+height:200px;
+ 
+border:none;
+}
+
+/* Caption */ figcaption{
+margin-top:10px; font-weight:bold; color:darkblue;
+}
+
+/* Footer */ footer{
+background:#004080; color:white;
+text-align:center; padding:15px;
+}
+
+/* Responsive Design */
+@media screen and (max-width:768px){
+.gallery{
+flex-direction:column; align-items:center;
+}
+figure{
+width:90%;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+<header>
+
+<h3>Responsive Media Gallery</h3>
+
+<p>HTML5 Multimedia Elements with CSS</p>
+
+</header>
+
+<section class="gallery">
+<figure>
+
+<img src="img/download.jpg" alt="Nature" title="Nature Image">
+<figcaption>Beautiful Nature</figcaption>
+ 
+</figure>
+<figure>
+
+<audio controls>
+
+<source src="audio/birds.mp3" type="audio/mpeg"> Your browser does not support audio.
+</audio>
+<figcaption>Sample Audio</figcaption>
+
+</figure>
+<figure>
+
+<video controls>
+<source src="video/bvv1.mp4" type="video/mp4"> Your browser does not support video.
+</video>
+<figcaption>Sample Video</figcaption>
+
+</figure>
+
+<figure>
+<iframe	width="400"	height="250" src=https://www.youtube.com/watch?v=hEGQNxHQZyw" title="YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+<figcaption>YouTube Video</figcaption>
+
+</figure>
+
+</section>
+
+<footer>
+<p>&copy; 2026 HTML/CSS Practical-IT-GECBhavnagar (balar krina)</p>
+</footer>
+
+</body>
+</html>
