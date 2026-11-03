@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Simple Calculator</h2>
+
+<script> let a = 10; let b = 5;
+let op = "+"; let result;
+ 
+switch(op)
+{
+case "+":
+result = a + b; break;
+case "-":
+result = a - b; break;
+
+case "*":
+result = a * b; break;
+case "/":
+result = a / b; break;
+default:
+result = "Invalid Operator";
+}
+document.write("Result = " + result);
+</script>
+
+<script>
+let num = 7; if(num % 2 == 0)
+{
+document.write("Even Number");
+}
+else
+{
+document.write("Odd Number");
+}
+</script>
+
+<script>
+
+let a = 20; let b = 50; let c = 30;
+if(a > b && a > c)
+{
+document.write(a + " is largest");
+}
+else if(b > c)
+{
+document.write(b + " is largest");
+}
+else
+{
+document.write(c + " is largest");
+}
+</script>
+
+<script>
+
+function factorial(n)
+{
+let fact = 1;
+for(let i=1; i<=n; i++)
+{
+fact = fact * i;
+}
+return fact;
+}
+let num = 5;
+
+document.write("Factorial = " + factorial(num));
+</script>
+
+<script>
+
+let num = 13; let flag = true;
+for(let i=2; i<num; i++)
+{
+if(num % i == 0)
+{
+flag = false; break;
+}
+}
+if(flag)
+{
+document.write("Prime Number");
+}
+else
+{
+document.write("Not Prime Number");
+}
+</script>
+
+<script>
+let str = "madam";
+let rev = str.split("").reverse().join(""); if(str == rev)
+{
+document.write("Palindrome");
+}
+else
+{
+document.write("Not Palindrome");
+ 
+}
+</script>
+
+<script> let A = [
+[1,2],
+[3,4]
+];
+
+let B = [
+[5,6],
+[7,8]
+];
+let C = [
+[0,0],
+[0,0]
+];
+
+for(let i=0;i<2;i++)
+{
+for(let j=0;j<2;j++)
+{
+for(let k=0;k<2;k++)
+{
+C[i][j] += A[i][k] * B[k][j];
+}
+}
+}
+document.write("Matrix Multiplication Result:<br>"); for(let i=0;i<2;i++)
+{
+document.write(C[i]+"<br>");
+}
+
+</script>
+
+
+</body>
+</html>
+
+
