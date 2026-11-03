@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Registration Validation</title>
+
+<style>
+.error{
+color:red;
+font-size:14px;
+}
+.success{ color:green;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Student Registration Form</h2>
+<form id="studentForm"> Name:
+<input type="text" id="name" placeholder="balar krina">
+<span id="nameError" class="error"></span>
+<br><br>
+
+Email:
+<input type="email" id="email">
+<span id="emailError" class="error"></span>
+<br><br>
+ 
+
+Mobile:
+<input type="text" id="mobile">
+<span id="mobileError" class="error"></span>
+<br><br>
+
+Password:
+<input type="password" id="password">
+<span id="passwordError" class="error"></span>
+<br><br>
+
+Gender:
+
+<input type="radio" name="gender" id="male" value="Male"> Male
+
+<input type="radio" name="gender" id="female" value="Female"> Female
+<span id="genderError" class="error"></span>
+<br><br>
+
+
+Course:
+<select id="course">
+
+<option value="">Select Course</option>
+
+<option value="IT"> Information Technology
+</option>
+
+<option value="Computer Engineering"> Computer Engineering
+</option>
+
+<option value="Mechanical"> Mechanical Engineering
+</option>
+
+</select>
+
+<span id="courseError" class="error"></span>
+<br><br>
+
+
+<input type="checkbox" id="agree"> I agree to terms and conditions
+<span id="agreeError" class="error"></span>
+
+<br><br>
+ 
+<button type="submit"> Register
+</button>
+
+</form>
+
+<p id="message" class="success"></p>
+
+
+<script>
+
+// DOM Selectors
+
+let form = document.getElementById("studentForm");
+// Event Handling form.addEventListener("submit", function(event)
+{
+
+let valid = true;
+// Get Values let name =
+document.getElementById("name").value.trim();
+let email = document.getElementById("email").value.trim();
+
+let mobile = document.getElementById("mobile").value.trim();
+let password = document.getElementById("password").value;
+let course = document.getElementById("course").value;
+
+let gender = document.querySelector( 'input[name="gender"]:checked'
+);
+
+let agree = document.getElementById("agree").checked;
+
+// Clear Previous Errors
+
+document.getElementById("nameError").innerHTML=""; document.getElementById("emailError").innerHTML=""; document.getElementById("mobileError").innerHTML=""; document.getElementById("passwordError").innerHTML=""; document.getElementById("genderError").innerHTML=""; document.getElementById("courseError").innerHTML=""; document.getElementById("agreeError").innerHTML="";
+ 
+// Name Validation
+if(name=="")
+{
+document.getElementById("nameError").innerHTML= "Name is required";
+valid=false;
+}
+// Email Validation let emailPattern =
+/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(!emailPattern.test(email))
+{
+document.getElementById("emailError").innerHTML= "Enter valid email";
+valid=false;
+}
+// Mobile Validation let mobilePattern =
+/^[0-9]{10}$/;
+
+if(!mobilePattern.test(mobile))
+{
+document.getElementById("mobileError").innerHTML= "Enter 10 digit mobile number";
+valid=false;
+}
+// Password Validation if(password.length < 6)
+{
+document.getElementById("passwordError").innerHTML= "Password must contain minimum 6 characters";
+valid=false;
+}
+// Gender Validation if(gender==null)
+{
+document.getElementById("genderError").innerHTML= "Select gender";
+valid=false;}
+// Course Validation
+
+if(course=="")
+{
+ 
+document.getElementById("courseError").innerHTML= "Select course";
+valid=false;
+}
+
+// Checkbox Validation if(!agree)
+{
+document.getElementById("agreeError").innerHTML= "Accept terms and conditions";
+valid=false;
+}
+// Prevent Form Submission if(valid==false)
+{
+event.preventDefault();
+}
+
+{
+document.getElementById("message").innerHTML= "Registration Successful!";
+}
+
+};
+
+</script>
+</body>
+</html>
+

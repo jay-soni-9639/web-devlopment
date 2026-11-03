@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>To-Do List Application</title>
+<style> body{
+font-family:Arial; text-align:center; background:#f2f2f2;
+}
+
+.container{ width:400px; margin:auto; background:white;
+ 
+padding:20px; border-radius:10px;
+}
+
+input{
+padding:8px; width:70%;
+}
+button{
+padding:8px; margin:5px;
+}
+
+ 
+li{
+
+
+
+
+}
+ 
+
+list-style:none; background:#ddd; margin:10px; padding:10px;
+ 
+.completed{
+text-decoration:line-through; color:green;
+}
+</style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+<h2>To-Do List (balar krina)</h2>
+
+<input type="text" id="task" placeholder="Enter Task">
+
+
+<button onclick="addTask()"> Add
+</button>
+
+<br><br>
+
+<input type="text" id="search" placeholder="Search Task" onkeyup="searchTask()">
+
+
+<ul id="taskList"></ul>
+</div>
+<script>
+// Load tasks from Local Storage
+ 
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+displayTasks();
+// Add Task Function function addTask()
+{
+
+let task = document.getElementById("task").value;
+if(task=="")
+{
+alert("Enter Task"); return;
+}
+
+tasks.push(
+{
+text:task, completed:false
+}
+);
+
+saveTasks(); displayTasks();
+document.getElementById("task").value="";
+
+}
+// Display Tasks function displayTasks()
+{
+
+let list = document.getElementById("taskList");
+list.innerHTML=""; tasks.forEach(function(item,index)
+{
+let li = document.createElement("li");
+
+if(item.completed)
+{
+li.className="completed";
+}
+li.innerHTML = item.text +
+ 
+"<br>" +
+
+"<button onclick='completeTask("+index+")'>Complete</button>" + "<button onclick='editTask("+index+")'>Edit</button>" +
+"<button onclick='deleteTask("+index+")'>Delete</button>"; list.appendChild(li);
+});
+}
+
+// Mark Completed
+function completeTask(index)
+{
+
+tasks[index].completed =
+!tasks[index].completed; saveTasks(); displayTasks();
+}
+// Edit Task
+function editTask(index)
+{
+let newTask = prompt(
+"Edit Task", tasks[index].text
+);
+
+if(newTask!=null)
+{
+
+tasks[index].text=newTask; saveTasks(); displayTasks();
+}
+
+}
+
+
+// Delete Task
+function deleteTask(index)
+{
+ 
+tasks.splice(index,1); saveTasks(); displayTasks();
+}
+// Search Task
+
+function searchTask()
+{
+
+let value = document.getElementById("search")
+.value.toLowerCase();
+
+let list = document.querySelectorAll("#taskList li");
+list.forEach(function(item)
+{
+if(item.innerText
+.toLowerCase()
+.includes(value))
+{
+
+item.style.display="block";
+}
+else
+{
+item.style.display="none";
+}
+});
+
+}
+
+// Save Data function saveTasks()
+{
+localStorage.setItem( "tasks", JSON.stringify(tasks)
+);
+
+}
+</script>
+</body>
+</html>

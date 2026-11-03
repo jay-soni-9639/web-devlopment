@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Weather Dashboard</title>
+
+<style> body{
+font-family:Arial; background:#f2f2f2; text-align:center;
+}
+.container{ width:350px; margin:50px auto; background:white; padding:20px; border-radius:10px;
+box-shadow:0 0 10px gray;
+}
+ 
+input{
+padding:8px; width:200px;
+}
+button{
+padding:8px 15px;
+}
+
+#loading{ color:blue;
+}
+
+#error{
+color:red;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+
+<h2>Weather Dashboard (balar krina)</h2>
+<input type="text" id="city" placeholder="Enter City">
+
+<button onclick="getWeather()">Search</button>
+<p id="loading"></p>
+<p id="error"></p>
+
+<h3 id="cityName"></h3>
+<p id="temperature"></p>
+<p id="humidity"></p>
+<p id="condition"></p>
+
+</div>
+<script>
+
+async function getWeather(){
+let city=document.getElementById("city").value; if(city==""){
+alert("Enter City Name"); return;
+}
+
+document.getElementById("loading").innerHTML="Loading..."; document.getElementById("error").innerHTML="";
+try{
+
+// Step 1: Get Latitude & Longitude let geo=await fetch(
+"https://geocoding-api.open-meteo.com/v1/search?name="+city
+);
+ 
+let geoData=await geo.json();
+if(!geoData.results){
+throw new Error("City Not Found");
+}
+
+let lat=geoData.results[0].latitude; let lon=geoData.results[0].longitude;
+// Step 2: Get Weather let weather=await fetch(
+"https://api.open-meteo.com/v1/forecast?latitude="+lat+ "&longitude="+lon+ "&current=temperature_2m,relative_humidity_2m");
+let data=await weather.json(); document.getElementById("loading").innerHTML="";
+document.getElementById("cityName").innerHTML= "City : "+geoData.results[0].name;
+document.getElementById("temperature").innerHTML= "Temperature : "+data.current.temperature_2m+" °C";
+document.getElementById("humidity").innerHTML= "Humidity : "+data.current.relative_humidity_2m+" %";
+
+document.getElementById("condition").innerHTML= "Weather : Clear";
+}
+catch(error){ document.getElementById("loading").innerHTML=""; document.getElementById("error").innerHTML= error.message;
+
+}
+}
+</script>
+</body>
+</html>
